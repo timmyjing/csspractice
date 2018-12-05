@@ -19,13 +19,10 @@ main {
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
+  font-family: sans-serif;
   grid-template-areas:    
     "nav section"
     "footer footer";
-}
-
-main > * {
-  border: 1px solid red;
 }
 
 #user-nav {
@@ -40,17 +37,95 @@ main > * {
   grid-template-rows: auto;
 }
 
-#playlist-container > * {
-  border: 1px solid yellow;
-}
 #playback-ui {
   background: #222;
   grid-area: footer;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 280px 3fr 1fr;
   grid-template-rows: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+#current-song {
+  display: grid;
+  grid-template-columns: 75px 120px 25px;
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
+}
+
+#album-art {
+  background: url('https://images-na.ssl-images-amazon.com/images/I/41bw59LF02L._SS500.jpg');
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+i {
+  font-size: 14px;
+}
+
+.icon-big {
+  font-size: 32px;
 }
 
 footer > * {
   border: 1px solid green;
+}
+
+#song-name {
+  font-size: 15px;
+}
+
+#song-artist {
+  font-size: 11px;
+  color: #AAA;
+}
+
+#song-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#song-detail > detail {
+  padding: 2px;
+}
+
+#playlist-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid pink;
+
+}
+
+#playlist-art {
+  background: url('https://images-na.ssl-images-amazon.com/images/I/41bw59LF02L._SS500.jpg');
+  background-repeat: no-repeat;
+  height: 250px;
+  width: auto;
+  background-size: contain;
+}
+
+#playback-controls-container {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-template-rows: 50px 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+#playback-controls {
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  align-items: center;
+}
+
+#song-seek {
+  margin: 5px;
+  width: 400px;
 }

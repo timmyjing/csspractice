@@ -1,10 +1,11 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <title>Spotify Web Player</title>
   </head>
 
@@ -17,16 +18,43 @@
       </nav>
       <section id="playlist-container">
         <aside id="playlist-detail">
-          Playlist Name
+          <figure id="playlist-art">
+          </figure>
+          MIA (feat. Drake)
+          Bad Bunny
+          Pause
+          2018 * 1 SONG
+          REMOVE FROM YOUR LIBRARY
         </aside>
         <section id="playlist">
           Playlist Songs
         </section>
       </section>
       <footer id="playback-ui">
-        <detail id="current-song">currentsong</detail>
-        <nav id="playback-controls">playback</nav>
-        <nav id="volume-controls">controls</nav>
+        <nav id="current-song">
+          <figure id="album-art"></figure>
+          <section id="song-detail">
+            <detail id="song-name">MIA (feat. Drake)</detail>
+            <detail id="song-artist">Bad Bunny, Drake</detail>
+          </section>
+          <i class="fas fa-plus"></i>
+        </nav>
+        <section id="playback-controls-container">
+          <nav id="playback-controls">
+            <i class="fas fa-random"></i>
+            <i class="fas fa-step-backward"></i>
+            <i class="far fa-play-circle icon-big"></i>
+            <i class="fas fa-step-forward"></i>
+            <i class="fas fa-redo"></i>
+          </nav>
+          <nav>
+            <input id="song-seek" type="range">
+          </nav>
+        </section>
+        <nav id="volume-controls">
+
+          <input type="range">
+        </nav>
       </footer>
     </main>
     <script src="./dist/bundle.js"></script>
