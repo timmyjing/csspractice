@@ -1,0 +1,56 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  line-height: 1;
+  font-size: 100%;
+}
+
+h1 {
+  color: red;
+}
+
+main {
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 6fr 1fr;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  grid-template-areas:    
+    "nav section"
+    "footer footer";
+}
+
+main > * {
+  border: 1px solid red;
+}
+
+#user-nav {
+  grid-area: nav;
+}
+
+#playlist-container {
+  grid-area: section;
+  background: #111;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto;
+}
+
+#playlist-container > * {
+  border: 1px solid yellow;
+}
+#playback-ui {
+  background: #222;
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto;
+}
+
+footer > * {
+  border: 1px solid green;
+}
