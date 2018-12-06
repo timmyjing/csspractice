@@ -17,12 +17,13 @@
           <i class="fab fa-spotify spotify-logo"></i>
           Spotify
         </a>
-        <a href="#"><i class="fas fa-search"></i> Search</a>
-        <a href="#"><i class="fas fa-home"></i> Home</a>
-        <a href="#"><i class="fas fa-list-alt"></i> Your Library</a>
+        <a class="nav-grey" href="#"><i class="fas fa-search"></i><span>Search</span></a>
+        <a class="nav-grey" href="#"><i class="fas fa-home"></i><span>Home</span></a>
+        <a class="nav-grey" href="#"><i class="fas fa-list-alt"></i><span>Your Library</span></a>
       </nav>
 
       <section id="playlist-container">
+
         <section id="playlist-detail-container">
           <figure id="playlist-art"></figure>
           <section id="playlist-detail">
@@ -33,17 +34,29 @@
             <p class="playlist-remove">REMOVE FROM YOUR LIBRARY</p>
           </section>
         </section>
-        <section id="playlist">
-          Playlist Songs
-        </section>
+
+        <ul id="playlist-songs-container">
+          <li class="playlist-song">
+            <div class="playlist-song-details">
+              <i class="fas fa-music"></i>
+              <div class="song-detail">
+                <p>MIA (feat. Drake)</p>
+                <p class="song-artist">Drake</p>
+              </div>
+            </div>
+            <p>3:30</p>
+         </li>
+          <p class="song-copyright">© 2018 OVO Sound/Rimas Entertainment LLC/Warner Bros. Records Inc.</p>
+          <p class="song-copyright">℗ 2018 OVO Sound/Rimas Entertainment LLC/Warner Bros. Records Inc.</p>
+        </ul>
       </section>
       
       <footer id="playback-ui">
         <nav id="current-song">
           <figure id="album-art"></figure>
           <section id="song-detail">
-            <detail id="song-name">MIA (feat. Drake)</detail>
-            <detail id="song-artist">Bad Bunny, Drake</detail>
+            <p id="song-name">MIA (feat. Drake)</p>
+            <p class="song-artist">Bad Bunny, Drake</p>
           </section>
           <i class="fas fa-plus"></i>
         </nav>
@@ -56,12 +69,12 @@
             <i class="fas fa-redo"></i>
           </nav>
           <nav>
-            <input id="song-seek" type="range">
+            <input id="song-seek" type="range" min="0" max="100" value="0">
           </nav>
         </section>
         <nav id="volume-controls">
           <i class="fas fa-volume-up"></i>
-          <input type="range">
+          <input type="range" id="player-volume" min="0" max="100" value="100">
         </nav>
       </footer>
 

@@ -41,13 +41,19 @@ main {
 }
 
 #user-nav > * {
-  padding: 10px;
+  padding: 15px 5px;
   margin-left: 10px;
+}
+
+#user-nav span {
+  padding-left: 25px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 #playlist-container {
   grid-area: section;
-  background: #111;
+  background: #060606;
   display: grid;
   grid-template-columns: 1fr 3fr;
   overflow: scroll;
@@ -96,18 +102,19 @@ footer > * {
   font-size: 15px;
 }
 
-#song-artist {
-  font-size: 11px;
+.song-artist {
+  font-size: 12px;
   color: #AAA;
+  letter-spacing: 0.4px;
 }
 
-#song-detail {
+.song-detail {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-#song-detail > detail {
+.song-detail > * {
   padding: 2px;
 }
 
@@ -125,7 +132,6 @@ footer > * {
   height: 100%;
   width: 100%;
   background-size: contain;
-  /* margin-top: 20px; */
 }
 
 #playback-controls-container {
@@ -187,6 +193,7 @@ button {
 
 .spotify-logo {
   font-size: 30px;
+  color: white;
 }
 
 #playlist-detail {
@@ -198,4 +205,53 @@ button {
 
 #playlist-detail > * {
   padding: 15px;
+}
+
+.nav-grey {
+  color: #AAA;
+}
+
+.nav-grey:hover {
+  color: white;
+}
+
+.playlist-song {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: center;
+  height: 70px;
+  padding: 5px;
+}
+
+.playlist-song:hover {
+  background: black;
+}
+
+.playlist-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 10px;
+}
+
+.song-copyright {
+  font-size: 13px;
+  color: #AAA;
+  padding-left: 20px;
+}
+
+.playlist-song-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 200px;
+}
+
+#playback-controls > i {
+  color: #AAA;
+}
+
+#playback-controls > i:hover {
+  color: white; 
 }
