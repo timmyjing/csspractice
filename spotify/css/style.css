@@ -5,8 +5,14 @@
   font-size: 100%;
 }
 
-h1 {
-  color: red;
+figure {
+  height: 100%;
+}
+
+a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 main {
@@ -20,6 +26,7 @@ main {
   height: 100vh;
   box-sizing: border-box;
   font-family: sans-serif;
+  word-wrap: wrap;
   grid-template-areas:    
     "nav section"
     "footer footer";
@@ -27,6 +34,15 @@ main {
 
 #user-nav {
   grid-area: nav;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#user-nav > * {
+  padding: 10px;
+  margin-left: 10px;
 }
 
 #playlist-container {
@@ -34,7 +50,8 @@ main {
   background: #111;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: auto;
+  overflow: scroll;
+  grid-template-rows: 1fr;
 }
 
 #playback-ui {
@@ -94,20 +111,21 @@ footer > * {
   padding: 2px;
 }
 
-#playlist-detail {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  border: 1px solid pink;
-
+#playlist-detail-container {
+  display: grid;
+  grid-template-rows: 2fr 2.5fr;
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
 }
 
 #playlist-art {
   background: url('https://images-na.ssl-images-amazon.com/images/I/41bw59LF02L._SS500.jpg');
   background-repeat: no-repeat;
-  height: 250px;
-  width: auto;
+  height: 100%;
+  width: 100%;
   background-size: contain;
+  /* margin-top: 20px; */
 }
 
 #playback-controls-container {
@@ -128,4 +146,56 @@ footer > * {
 #song-seek {
   margin: 5px;
   width: 400px;
+}
+
+#volume-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playlist-name {
+  font-size: 26px;
+}
+
+button {
+  padding: 5px;
+  width: 120px;
+  border-radius: 20px;
+  background: #00E155;
+  color: white;
+  border: none;
+}
+
+.playlist-creator {
+  font-size: 14px;
+  color: #AAA;
+  margin-top: -20px;
+  letter-spacing: 0.25px;
+}
+
+.playlist-remove {
+  font-size: 10px;
+  color: green;
+}
+
+.playlist-created {
+  color: #AAA;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.spotify-logo {
+  font-size: 30px;
+}
+
+#playlist-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#playlist-detail > * {
+  padding: 15px;
 }

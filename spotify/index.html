@@ -11,25 +11,33 @@
 
   <body>
     <main>
+
       <nav id="user-nav">
-        <p>Playlists</p>
-        <p>Playlists</p>
-        <p>Playlists</p>
+        <a href="#">
+          <i class="fab fa-spotify spotify-logo"></i>
+          Spotify
+        </a>
+        <a href="#"><i class="fas fa-search"></i> Search</a>
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-list-alt"></i> Your Library</a>
       </nav>
+
       <section id="playlist-container">
-        <aside id="playlist-detail">
-          <figure id="playlist-art">
-          </figure>
-          MIA (feat. Drake)
-          Bad Bunny
-          Pause
-          2018 * 1 SONG
-          REMOVE FROM YOUR LIBRARY
-        </aside>
+        <section id="playlist-detail-container">
+          <figure id="playlist-art"></figure>
+          <section id="playlist-detail">
+            <h1 class="playlist-name">MIA (feat. Drake)</h1>
+            <p class="playlist-creator">Bad Bunny</p>
+            <button>Play</button>
+            <p class="playlist-created">2018 • 1 SONG</p>
+            <p class="playlist-remove">REMOVE FROM YOUR LIBRARY</p>
+          </section>
+        </section>
         <section id="playlist">
           Playlist Songs
         </section>
       </section>
+      
       <footer id="playback-ui">
         <nav id="current-song">
           <figure id="album-art"></figure>
@@ -52,10 +60,11 @@
           </nav>
         </section>
         <nav id="volume-controls">
-
+          <i class="fas fa-volume-up"></i>
           <input type="range">
         </nav>
       </footer>
+
     </main>
     <script src="./dist/bundle.js"></script>
   </body>
