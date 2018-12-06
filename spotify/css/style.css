@@ -32,6 +32,13 @@ main {
     "footer footer";
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 #user-nav {
   grid-area: nav;
   overflow: scroll;
@@ -192,8 +199,9 @@ button {
 }
 
 .spotify-logo {
-  font-size: 30px;
+  font-size: 38px;
   color: white;
+  padding-right: 8px;
 }
 
 #playlist-detail {
